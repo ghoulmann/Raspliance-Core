@@ -9,7 +9,7 @@ The devs at Turnkey Linux have made an art of the dedicated appliance platform; 
 Run compile_tklpatch.sh in order to make the tool to apply this patch to raspian. or raspbian.
 
 Use this command to apply the patch (assuming your in the directory with the tar ball):
-tklpatch-apply / core.tar.gz
+tklpatch-apply / ./core/
 This applies the root directory to your running instance of raspian. Don't quit reading here.
 
 ---Contents---
