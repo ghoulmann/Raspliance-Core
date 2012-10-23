@@ -1,0 +1,11 @@
+<header>Size of Backup Volumes</header>
+
+<p>The size in megabytes of the encrypted volumes created by TKLBAM's back-end
+Duplicity. The default is fine for most usage scenarios.</p>
+
+<p>Slow and unreliable network connections may benefit from a lower volume
+size. Amazon S3 doesn't support resuming partial uploads for a stored
+object so if the network breaks during upload, Duplicity will restart
+the upload for that backup volume.</p>
+
+<footer>

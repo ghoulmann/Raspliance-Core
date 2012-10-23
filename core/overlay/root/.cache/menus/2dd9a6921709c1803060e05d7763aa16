@@ -1,0 +1,687 @@
+1.1
+applications.menu
+16
+D/root/.local/share/desktop-directories
+D/usr/local/share/desktop-directories
+D/usr/share/desktop-directories
+D/usr/share/gdm/desktop-directories
+D/var/lib/menu-xdg/desktop-directories/menu-xdg
+D/var/lib/menu-xdg/desktop-directories
+D/root/.local/share/applications
+D/usr/local/share/applications
+D/usr/share/applications
+D/usr/share/gdm/applications
+D/var/lib/menu-xdg/applications/menu-xdg
+D/var/lib/menu-xdg/applications
+D/etc/xdg/menus/applications-merged
+D/root/.config/menus/applications-merged
+F/root/.config/menus/lxde-applications.menu
+F/etc/xdg/menus/lxde-applications.menu
+
++Applications
+Applications
+Applications
+applications-other
+lxde-menu-applications.directory
+2
++Accessories
+Accessories
+Desktop accessories
+applications-accessories
+lxde-utility.directory
+2
+-debian-reference-common.desktop
+Debian Reference
+Debian Reference Guide
+debian-reference.png
+
+8
+Debian Reference
+debian-reference
+0
+0
+-pcmanfm.desktop
+File Manager
+Browse the file system and manage the files
+system-file-manager
+
+8
+File Manager
+pcmanfm %U
+2
+0
+-gpicview.desktop
+Image Viewer
+View your images easily
+gpicview
+
+8
+Image Viewer
+gpicview %f
+2
+0
+-lxterminal.desktop
+LXTerminal
+Use the command line
+lxterminal
+
+8
+LXTerminal
+lxterminal
+0
+0
+-leafpad.desktop
+Leafpad
+Simple text editor
+leafpad
+
+8
+Leafpad
+leafpad %f
+0
+0
+-gksu.desktop
+Root Terminal
+Opens a terminal as the root user, using gksu to ask for the password
+gksu-root-terminal
+
+8
+Root Terminal
+gksu /usr/bin/x-terminal-emulator
+2
+0
+-xarchiver.desktop
+Xarchiver
+A GTK+2 only archive manager
+xarchiver.png
+
+8
+Xarchiver
+xarchiver
+2
+0
+
++Education
+Education
+
+applications-science
+lxde-education.directory
+2
+-scratch.desktop
+Scratch
+Programming system and content development tool
+scratch
+
+8
+Scratch
+scratch %f
+0
+0
+-squeak.desktop
+Squeak
+Programming system and content development tool
+/usr/share/pixmaps/squeak.png
+
+8
+Squeak
+squeak
+0
+0
+
++Internet
+Internet
+Programs for Internet access such as web and e-mail
+applications-internet
+lxde-network.directory
+2
+-dillo.desktop
+Dillo
+Lightweight browser
+dillo
+
+8
+Dillo
+dillo
+0
+0
+-midori.desktop
+Midori
+Lightweight web browser
+midori
+
+8
+Midori
+midori %U
+2
+0
+-midori-private.desktop
+Midori Private Browsing
+Open a new private browsing window
+midori
+
+8
+Midori Private Browsing
+midori --private %U
+2
+0
+-netsurf-gtk.desktop
+NetSurf Web Browser
+Browse the World Wide Web
+netsurf.png
+
+8
+NetSurf Web Browser
+netsurf-gtk %u
+2
+0
+-wpa_gui.desktop
+wpa_gui
+Graphical user interface for wpa_supplicant
+wpa_gui
+
+8
+wpa_gui
+/usr/sbin/wpa_gui
+0
+0
+
++Other
+Other
+Applications that do not fit in other categories
+applications-other
+lxde-other.directory
+2
+-menu-xdg-X-Debian-Applications-System-Package-Management-aptitude_package_manager_(text).desktop
+Aptitude Package Manager (text)
+
+
+X-Debian-Applications-System-Package-Management-aptitude_package_manager_(text).desktop
+10
+Aptitude Package Manager (text)
+/usr/bin/aptitude-curses
+1
+0
+-menu-xdg-X-Debian-Applications-Shells-bash.desktop
+Bash
+
+
+X-Debian-Applications-Shells-bash.desktop
+10
+Bash
+/bin/bash --login
+1
+0
+-menu-xdg-X-Debian-Applications-Shells-dash.desktop
+Dash
+
+
+X-Debian-Applications-Shells-dash.desktop
+10
+Dash
+/bin/dash -i
+1
+0
+-menu-xdg-X-Debian-Help-debian_reference.desktop
+Debian Reference
+
+
+X-Debian-Help-debian_reference.desktop
+10
+Debian Reference
+/usr/bin/debian-reference
+0
+0
+-menu-xdg-X-Debian-Applications-System-Administration-debian_task_selector.desktop
+Debian Task selector
+
+
+X-Debian-Applications-System-Administration-debian_task_selector.desktop
+10
+Debian Task selector
+su-to-root -c tasksel
+1
+0
+-menu-xdg-X-Debian-Applications-Network-Web-Browsing-dillo.desktop
+Dillo
+
+/usr/share/pixmaps/dillo.xpm
+X-Debian-Applications-Network-Web-Browsing-dillo.desktop
+10
+Dillo
+/usr/bin/dillo
+0
+0
+-menu-xdg-X-Debian-Applications-System-Administration-editres.desktop
+Editres
+Editres: resource editor for X Toolkit applications
+
+X-Debian-Applications-System-Administration-editres.desktop
+10
+Editres
+editres
+0
+0
+-menu-xdg-X-Debian-Applications-Programming-gdb.desktop
+GDB
+
+
+X-Debian-Applications-Programming-gdb.desktop
+10
+GDB
+/usr/bin/gdb
+1
+0
+-menu-xdg-X-Debian-Applications-Programming-idle_(python_ide).desktop
+IDLE (Python IDE)
+
+/usr/share/pixmaps/idle.xpm
+X-Debian-Applications-Programming-idle_(python_ide).desktop
+10
+IDLE (Python IDE)
+/usr/bin/idle
+0
+0
+-menu-xdg-X-Debian-Applications-Programming-idle_(python_v2.7).desktop
+IDLE (Python v2.7)
+
+/usr/share/pixmaps/python2.7.xpm
+X-Debian-Applications-Programming-idle_(python_v2.7).desktop
+10
+IDLE (Python v2.7)
+/usr/bin/idle-python2.7 -n
+0
+0
+-menu-xdg-X-Debian-Applications-Programming-idle_(python_v3.2).desktop
+IDLE (Python v3.2)
+
+/usr/share/pixmaps/python3.2.xpm
+X-Debian-Applications-Programming-idle_(python_v3.2).desktop
+10
+IDLE (Python v3.2)
+/usr/bin/idle-python3.2 -n
+0
+0
+-menu-xdg-X-Debian-Applications-Programming-idle_(python3_ide).desktop
+IDLE (Python3 IDE)
+
+/usr/share/pixmaps/idle3.xpm
+X-Debian-Applications-Programming-idle_(python3_ide).desktop
+10
+IDLE (Python3 IDE)
+/usr/bin/idle3
+0
+0
+-menu-xdg-X-Debian-Help-info.desktop
+Info
+GNU Info browser
+
+X-Debian-Help-info.desktop
+10
+Info
+info
+1
+0
+-menu-xdg-X-Debian-Applications-System-Administration-lxappearance.desktop
+LXAppearance
+LXDE GTK+ theme switcher
+
+X-Debian-Applications-System-Administration-lxappearance.desktop
+10
+LXAppearance
+/usr/bin/lxappearance
+0
+0
+-menu-xdg-X-Debian-Applications-System-Monitoring-lxrandr.desktop
+LXRandR
+LXDE monitor configuration tool
+
+X-Debian-Applications-System-Monitoring-lxrandr.desktop
+10
+LXRandR
+/usr/bin/lxrandr
+0
+0
+-menu-xdg-X-Debian-Applications-System-Monitoring-lxtask.desktop
+LXTask
+LXDE task manager
+
+X-Debian-Applications-System-Monitoring-lxtask.desktop
+10
+LXTask
+/usr/bin/lxtask
+0
+0
+-menu-xdg-X-Debian-Applications-Terminal-Emulators-lxterminal.desktop
+LXTerminal
+LXDE terminal emulator
+/usr/share/pixmaps/lxterminal.xpm
+X-Debian-Applications-Terminal-Emulators-lxterminal.desktop
+10
+LXTerminal
+/usr/bin/lxterminal
+0
+0
+-menu-xdg-X-Debian-Applications-Editors-leafpad.desktop
+LeafPad
+GTK+ based simple text editor
+/usr/share/pixmaps/leafpad.xpm
+X-Debian-Applications-Editors-leafpad.desktop
+10
+LeafPad
+/usr/bin/leafpad
+0
+0
+-menu-xdg-X-Debian-Applications-Network-Web-Browsing-midori.desktop
+Midori
+
+
+X-Debian-Applications-Network-Web-Browsing-midori.desktop
+10
+Midori
+midori
+0
+0
+-menu-xdg-X-Debian-Applications-Editors-nano.desktop
+Nano
+
+/usr/share/nano/nano-menu.xpm
+X-Debian-Applications-Editors-nano.desktop
+10
+Nano
+/bin/nano
+1
+0
+-menu-xdg-X-Debian-Applications-Network-Web-Browsing-netsurf_web_browser.desktop
+Netsurf Web Browser
+
+/usr/share/pixmaps/netsurf.xpm
+X-Debian-Applications-Network-Web-Browsing-netsurf_web_browser.desktop
+10
+Netsurf Web Browser
+/usr/bin/netsurf-gtk
+0
+0
+-menu-xdg-X-Debian-Applications-System-Administration-openbox_configuration_manager.desktop
+Openbox Configuration Manager
+
+/usr/share/pixmaps/obconf.xpm
+X-Debian-Applications-System-Administration-openbox_configuration_manager.desktop
+10
+Openbox Configuration Manager
+/usr/bin/obconf
+0
+0
+-menu-xdg-X-Debian-Applications-File-Management-pcmanfm.desktop
+PCManFM
+Real Tabbed File Manager
+
+X-Debian-Applications-File-Management-pcmanfm.desktop
+10
+PCManFM
+/usr/bin/pcmanfm
+0
+0
+-menu-xdg-X-Debian-Applications-System-Monitoring-pstree.desktop
+Pstree
+
+/usr/share/pixmaps/pstree16.xpm
+X-Debian-Applications-System-Monitoring-pstree.desktop
+10
+Pstree
+/usr/bin/pstree.x11
+1
+0
+-menu-xdg-X-Debian-Applications-Programming-python_(v2.7).desktop
+Python (v2.7)
+
+/usr/share/pixmaps/python2.7.xpm
+X-Debian-Applications-Programming-python_(v2.7).desktop
+10
+Python (v2.7)
+/usr/bin/python2.7
+1
+0
+-menu-xdg-X-Debian-Applications-Programming-python_(v3.2).desktop
+Python (v3.2)
+
+/usr/share/pixmaps/python3.2.xpm
+X-Debian-Applications-Programming-python_(v3.2).desktop
+10
+Python (v3.2)
+/usr/bin/python3.2
+1
+0
+-menu-xdg-X-Debian-Applications-Shells-sh.desktop
+Sh
+
+
+X-Debian-Applications-Shells-sh.desktop
+10
+Sh
+/bin/sh --login
+1
+0
+-menu-xdg-X-Debian-Applications-Programming-tclsh8.5.desktop
+Tclsh8.5
+
+
+X-Debian-Applications-Programming-tclsh8.5.desktop
+10
+Tclsh8.5
+/usr/bin/tclsh8.5
+1
+0
+-menu-xdg-X-Debian-Applications-Programming-tkwish8.5.desktop
+TkWish8.5
+
+
+X-Debian-Applications-Programming-tkwish8.5.desktop
+10
+TkWish8.5
+x-terminal-emulator -e /usr/bin/wish8.5
+0
+0
+-menu-xdg-X-Debian-Applications-System-Monitoring-top.desktop
+Top
+
+
+X-Debian-Applications-System-Monitoring-top.desktop
+10
+Top
+/usr/bin/top
+1
+0
+-menu-xdg-X-Debian-Applications-Terminal-Emulators-x-terminal_as_root_(gksu).desktop
+X-Terminal as root (GKsu)
+Runs an X terminal application. Uses GKsu to ask the password.
+/usr/share/pixmaps/gksu-debian.xpm
+X-Debian-Applications-Terminal-Emulators-x-terminal_as_root_(gksu).desktop
+10
+X-Terminal as root (GKsu)
+/usr/bin/gksu -u root /usr/bin/x-terminal-emulator
+0
+0
+-menu-xdg-X-Debian-Applications-File-Management-xarchiver.desktop
+Xarchiver
+GTK+ frontend for most used compression formats
+/usr/share/pixmaps/xarchiver.xpm
+X-Debian-Applications-File-Management-xarchiver.desktop
+10
+Xarchiver
+/usr/bin/xarchiver
+0
+0
+-menu-xdg-X-Debian-Applications-System-Monitoring-xev.desktop
+Xev
+Xev: display X events
+
+X-Debian-Applications-System-Monitoring-xev.desktop
+10
+Xev
+x-terminal-emulator -e xev
+0
+0
+-menu-xdg-X-Debian-Applications-System-Administration-xfontsel.desktop
+Xfontsel
+Xfontsel: font viewer/selector for X
+
+X-Debian-Applications-System-Administration-xfontsel.desktop
+10
+Xfontsel
+xfontsel
+0
+0
+-menu-xdg-X-Debian-Applications-System-Administration-xkill.desktop
+Xkill
+Xkill: tool to kill X clients by clicking on their windows
+
+X-Debian-Applications-System-Administration-xkill.desktop
+10
+Xkill
+xkill
+0
+0
+-menu-xdg-X-Debian-Applications-Network-Monitoring-wpa_supplicant_user_interface.desktop
+wpa_supplicant user interface
+
+/usr/share/pixmaps/wpa_gui.xpm
+X-Debian-Applications-Network-Monitoring-wpa_supplicant_user_interface.desktop
+10
+wpa_supplicant user interface
+/usr/sbin/wpa_gui
+0
+0
+
++Development
+Programming
+Tools for software development
+applications-development
+lxde-development.directory
+2
+-idle.desktop
+IDLE
+Integrated Development Environment for Python
+/usr/share/pixmaps/idle.xpm
+
+8
+IDLE
+/usr/bin/idle
+2
+0
+-idle3.desktop
+IDLE 3
+Integrated DeveLopment Environment for Python3
+/usr/share/pixmaps/idle3.xpm
+
+8
+IDLE 3
+/usr/bin/idle3
+2
+0
+-scratch.desktop
+Scratch
+Programming system and content development tool
+scratch
+
+8
+Scratch
+scratch %f
+0
+0
+-squeak.desktop
+Squeak
+Programming system and content development tool
+/usr/share/pixmaps/squeak.png
+
+8
+Squeak
+squeak
+0
+0
+
++System
+System Tools
+System configuration and monitoring
+applications-system
+lxde-system-tools.directory
+2
+-lxtask.desktop
+Task Manager
+Manage running processes
+utilities-system-monitor
+
+8
+Task Manager
+lxtask
+2
+0
+
+-
++DesktopSettings
+Preferences
+Personal preferences
+preferences-desktop
+lxde-settings.directory
+2
+-lxappearance.desktop
+Customise Look and Feel
+Customises look and feel of your desktop and applications
+preferences-desktop-theme
+
+8
+Customise Look and Feel
+lxappearance
+2
+-11
+-lxsession-edit.desktop
+Desktop Session Settings
+Manage applications loaded in desktop session
+xfwm4
+
+8
+Desktop Session Settings
+lxsession-edit
+0
+-15
+-lxinput.desktop
+Keyboard and Mouse
+Configure keyboard, mouse, and other input devices
+input-keyboard
+
+8
+Keyboard and Mouse
+lxinput
+2
+1
+-lxrandr.desktop
+Monitor Settings
+Change screen resolution and configure external monitors
+display
+
+8
+Monitor Settings
+lxrandr
+0
+0
+-obconf.desktop
+Openbox Configuration Manager
+Configure and personalize the Openbox window manager
+obconf
+
+8
+Openbox Configuration Manager
+obconf %f
+2
+0
+-libfm-pref-apps.desktop
+Preferred Applications
+
+preferences-desktop
+
+8
+Preferred Applications
+libfm-pref-apps
+2
+-15
+
+

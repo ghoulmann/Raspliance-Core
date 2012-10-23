@@ -1,0 +1,12 @@
+fstab_file=Fitxer que llista els sistemes de fitxers muntats en engegar el sistema,0
+nmblookup_path=Camí complet de nmblookup,3
+auto_file=Fitxer de muntatges automàtics NFS,3
+line1=Opcions configurables,11
+line2=Configuració del sistema,11
+browse_server=Demana la llista d'exploració al servidor,3,localhost
+smbclient_path=Camí complet de smbclient,3
+show_used=Mostra l'espai en disc utilitzat a les llistes de sistemes de fitxers,1,1-Sí,0-No
+autofs_file=Fitxer de muntatges automàtics de nucli,3
+delete_under=Suprimeix el directori en desmuntar, si queda per sota,3,No el suprimeixis mai
+long_fstypes=Utilitza tipus llargs de sistemes de fitxers,1,1-Sí,0-No
+sort_mode=Ordena els sistemes de fitxers per,1,2-Punt de Muntatge,1-Tipus,0-Ordre en els fitxers

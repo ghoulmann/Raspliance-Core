@@ -1,0 +1,8 @@
+desc_ca=Estat del Sistema
+version=1.590
+longdesc=Background system status collection libraries
+desc=System Status
+category=system
+hidden=1
+depends=proc cron 1.590
+desc_ca.UTF-8=Estat del Sistema

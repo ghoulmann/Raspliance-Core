@@ -1,0 +1,37 @@
+Xsession: X session started for root at Tue Sep 18 08:44:01 EDT 2012
+Openbox-Message: Couldn't set messages locale category from environment.
+
+(process:3376): Gtk-WARNING **: Locale not supported by C library.
+	Using the fallback 'C' locale.
+
+(process:3380): Gtk-WARNING **: Locale not supported by C library.
+	Using the fallback 'C' locale.
+Openbox-Message: Couldn't set locale from environment.
+
+(process:3377): Gtk-WARNING **: Locale not supported by C library.
+	Using the fallback 'C' locale.
+Obt-Message: Xinerama extension is not present on the server
+Openbox-Message: Unable to find a valid menu file "/usr/share/lxde/openbox/menu.xml"
+
+(process:3516): Gtk-WARNING **: Locale not supported by C library.
+	Using the fallback 'C' locale.
+
+(process:3522): Gtk-WARNING **: Locale not supported by C library.
+	Using the fallback 'C' locale.
+
+(process:3525): Gtk-WARNING **: Locale not supported by C library.
+	Using the fallback 'C' locale.
+
+(process:3532): Gtk-WARNING **: Locale not supported by C library.
+	Using the fallback 'C' locale.
+
+** (lxsession-logout:3532): WARNING **: dbus-interface.c:94: DBUS: The name org.freedesktop.UPower was not provided by any .service files
+
+** (lxsession-logout:3532): WARNING **: dbus-interface.c:94: DBUS: The name org.freedesktop.UPower was not provided by any .service files
+
+** (lxsession-logout:3532): WARNING **: dbus-interface.c:94: DBUS: The name org.freedesktop.Hal was not provided by any .service files
+
+** (lxsession-logout:3532): WARNING **: dbus-interface.c:94: DBUS: The name org.freedesktop.Hal was not provided by any .service files
+XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server ":0"
+      after 15808 requests (15805 known processed) with 0 events remaining.
+pcmanfm: Fatal IO error 0 (Success) on X server :0.

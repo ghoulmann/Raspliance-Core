@@ -1,0 +1,11 @@
+defzip=Standaard archief mode voor uploads,1,2-Extract en verwijder,1-Extract,0-Doe niets
+width=Breedte voor verschaalde plaatjes,3,Standaard (300 pixels)
+fixed=Font grote voor tekst,3,Standaard (12 punten)
+iconsize=Grote van knoppen in toolbar,1,1-Klein,0-Groot met labels
+htmlexts=File extensies bewerken als HTML,3,Standaard (.htm en .html)
+force_text=Bewerker voor HTML files,1,1-Tekst bewerker,0-HTML bewerker
+extract=Extract .class files van JAR?,1,1-Ja,0-Nee
+nocharset=Probeer juiste karakterset te gebruiken?,1,0--Ja,1-Nee
+small_fixed=Font grote voor knoppen,3,Standaard (10 punten)
+hide_dot_files=Laat files zien die beginnen met een punt?,1,0-Ja,1-Nee
+defuser=Standaard gebruiker voor uploads,10,root-root,*-Zelfde als directory,Andere gebruiker

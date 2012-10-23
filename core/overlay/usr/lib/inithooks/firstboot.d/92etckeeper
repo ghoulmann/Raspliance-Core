@@ -1,0 +1,10 @@
+#!/bin/bash -e
+# initialize etckeeper and perform initial commit
+# ETCKEEPER_COMMIT: SKIP (if skip specified, exit)
+
+[ "$ETCKEEPER_COMMIT" == "SKIP" ] && exit 0
+
+etckeeper uninit -f > /dev/null 2>&1
+etckeeper init >/dev/null
+etckeeper commit "initial commit" >/dev/null
+

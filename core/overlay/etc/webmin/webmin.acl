@@ -1,0 +1,1 @@
+root: webmincron webminlog webmin servers acl init passwd mount inittab proc cron software man syslog system-status useradmin sshd firewall net fdisk shell custom file text-editor updown theme-stressfree

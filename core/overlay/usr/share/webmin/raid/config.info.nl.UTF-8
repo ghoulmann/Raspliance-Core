@@ -1,0 +1,6 @@
+raidtab=RAIDTools configuratie file,0
+mdstat=Kernel RAID status file,0
+refresh=Seconden tussen RAID status verversingen,3,Nooit
+mdadm=MDADM configuratie file,0
+line1=Configureerbare opties,11
+line2=Systeem configuratie,11

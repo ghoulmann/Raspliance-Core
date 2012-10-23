@@ -1,0 +1,53 @@
+#!/bin/sh
+# Copyright (c) 2009 Alon Swartz <alon@turnkeylinux.org> - all rights reserved
+
+### BEGIN INIT INFO
+# Provides:          inithooks
+# Required-Start:    $local_fs $network $named
+# Required-Stop:     $local_fs $network $named
+# Default-Start:     2
+# Default-Stop:      
+# X-Interactive:     true
+# Short-Description: Executes initialization hooks at boot time
+# Description:       Executes firstboot and everyboot scripts
+### END INIT INFO
+
+DESC="Initialization hooks"
+NAME=inithooks
+
+# Check if VT's are supported
+fgconsole >/dev/null 2>&1 && INITHOOKS_CHVT=y
+
+. /lib/lsb/init-functions
+. /etc/default/inithooks
+
+case "$1" in
+  start)
+    log_begin_msg "Starting $DESC"
+    if [ "$INITHOOKS_CHVT" ]; then
+        setterm -blank 0
+        chvt 1
+        openvt -c 8 -s -w -- $INITHOOKS_PATH/run
+    else
+        $INITHOOKS_PATH/run
+    fi
+    log_action_end_msg $?
+    ;;
+
+  stop)
+    exit 0
+    ;;
+
+  restart|reload|force-reload)
+    echo "Error: argument '$1' not supported" >&2
+    exit 3
+    ;;
+
+  *)
+    N=/etc/init.d/$NAME
+    echo "Usage: $N {start}" >&2
+    exit 1
+    ;;
+esac
+
+exit 0

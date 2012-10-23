@@ -1,0 +1,38 @@
+<header>Full Backup Frequency</header>
+
+<p>A full backup is a backup that can be restored independently of any
+other backup. A full backup will be performed if the last full backup is
+older than the specified frequency. Between full backups, all backups
+are incremental, saving only changes made since the previous backup.</p>
+
+<h3>Syntax</h3>
+
+<p>FREQUENCY := &lt;int&gt;[DWM]</p>
+
+<p>'D' is for Days. 'W' is for Weeks. 'M' is for Months.</p>
+
+<h3>Examples</h3>
+<pre>
+  3D      three days
+  2W      two weeks
+  1M      one month
+</pre>
+
+
+<h3>Technical Implications</h3>
+
+<p>Incremental backups are useful because they are fast and efficient.
+But restoring an incremental backup requires retrieving the volumes of
+all backup sessions made before it, up to and including the full backup
+that started the chain. The longer the backup chain, the more time it
+will take to restore.</p>
+
+<p>Very long backup chains are inefficient and more vulnerable if
+something goes wrong as links in the chain depend on one another.</p>
+
+<p>If you backup daily, and do a full backup monthly, your backup chains
+will consist of a full backup with at most 30 incremental backups linked
+to it. If you backup more frequently (e.g., hourly) you may want to
+reduce the full backup frequency to every few days.</p>
+
+<footer>

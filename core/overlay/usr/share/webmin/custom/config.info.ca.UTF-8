@@ -1,0 +1,8 @@
+width=Amplada de la finestra de l'editor,3,Defecte (80 caràcters)
+params_file=Tracta els valors per defecte que comencin amb / com un fitxer per llegir,1,1-Sí,0-No
+line2=Ordena les ordres per,1,desc-Nom d'ordre,html-Descripció,-Ordenació d'ordres
+height=Alçada de la finestra de l'editor,3,Defecte (20 caràcters)
+params_cmd=Tracta els valors per defecte que acabin amb | com a ordres a executar,1,1-Sí,0-No
+display_mode=La pàgina principal mostra,1,0-Totes les ordres i paràmetres,1-Enllaços a les ordres
+columns=Columnes per mostrar-hi les ordres,1,2-2,1-1
+wrap=Mode wrap de l'editor,1,-Defecte (Soft),hard-Hard,off-Desactivat

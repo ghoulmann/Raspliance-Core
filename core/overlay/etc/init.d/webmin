@@ -1,0 +1,61 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:          webmin
+# Required-Start:    $all
+# Required-Stop:     $network
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Webmin
+# Description:       A web-based administration interface for Unix systems
+### END INIT INFO
+
+NAME=webmin
+
+set -e
+. /lib/lsb/init-functions
+
+case "$1" in
+    'start')
+        log_begin_msg "Starting $NAME"
+        /etc/webmin/start >/dev/null 2>&1 </dev/null
+        RETVAL=$?
+        log_action_end_msg $RETVAL
+        ;;
+
+    'stop')
+        log_begin_msg "Stopping $NAME"
+        /etc/webmin/stop
+        RETVAL=$?
+        log_action_end_msg $RETVAL
+        ;;
+
+    'status')
+        pidfile=`grep "^pidfile=" /etc/webmin/miniserv.conf | sed -e 's/pidfile=//g'`
+        if [ -s $pidfile ]; then
+            pid=`cat $pidfile`
+            kill -0 $pid >/dev/null 2>&1
+            if [ "$?" = "0" ]; then
+                echo "webmin (pid $pid) is running"
+                RETVAL=0
+            else
+                echo "webmin is stopped"
+                RETVAL=1
+            fi
+        else
+            echo "webmin is stopped"
+            RETVAL=1
+        fi
+        ;;
+
+    'restart')
+        /etc/webmin/stop ; /etc/webmin/start
+        RETVAL=$?
+        ;;
+    *)
+        echo "Usage: $0 { start | stop }"
+        RETVAL=1
+        ;;
+esac
+exit $RETVAL
+

@@ -1,0 +1,5 @@
+#!/bin/bash -e
+
+sed -i '/RUN_FIRSTBOOT/ s/=.*/=true/g' /etc/default/inithooks
+sed -i '/REDIRECT_OUTPUT/ s/=.*/=false/g' /etc/default/inithooks
+/usr/lib/inithooks/run

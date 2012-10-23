@@ -1,0 +1,28 @@
+<header>Escrow Key</header>
+
+<p>An escrow key, stored in a safe place, can protect against data
+loss by allowing you to restore a backup even if you passphrase protect
+the encryption secret and then forget the passphrase.</p>
+
+<p>If you don't use passphrase protection, you don't need an escrow key.
+Your data is still encrypted, but the key exchange is managed
+transparently by the Hub.</p>
+
+<h3>Forgotten your passphrase and don't have an escrow key?</h3>
+
+<p>If the system you backed up is still available, you can set a new
+passphrase in the TKLBAM Webmin interface without needing to know the
+old passphrase.</p>
+
+<p>Otherwise, if you've forgotten the passphrase and don't have an
+escrow key nobody can help you. The encryption key for a backup is
+generated locally on your server and we designed passphrase protection
+to use <a href="http://www.turnkeylinux.org/blog/tklbam-backup-passphrase">special
+cryptographic countermeasures</a> to make typical cracking techniques
+(e.g., dictionary attacks) very difficult even for an attacker with
+access to massive computer resources.
+
+<p>Next time we recommend you save an escrow key somewhere safe or don't set a
+passphrase.</p> 
+
+<footer>

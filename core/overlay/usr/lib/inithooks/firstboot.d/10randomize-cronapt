@@ -1,0 +1,13 @@
+#!/bin/bash -e
+# set random hour/minute for security updates (cron-apt)
+
+# random hour: 0-23, minute: 0-59
+HOUR=$[ ($RANDOM % 23) ]
+MINUTE=$[ ($RANDOM % 59) ]
+
+cat > /etc/cron.d/cron-apt << EOF
+# cron job for cron-apt package
+# randomized time to prevent clients from accessing repo at the same time
+$MINUTE $HOUR * * * root test -x /usr/sbin/cron-apt && /usr/sbin/cron-apt
+
+EOF

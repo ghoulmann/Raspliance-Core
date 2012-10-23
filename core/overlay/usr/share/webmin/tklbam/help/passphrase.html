@@ -1,0 +1,26 @@
+<header>SKPP - Secret Key Passphrase Protection</header>
+
+<p>Backups are always encrypted with a unique secret key generated
+locally on your server, whether or not you set a passphrase.</p>
+
+<p>If you don't use passphrase protection, the secret key exchange is
+managed transparently by the Hub over a secure SSL connection.</p>
+
+<p>But for extra security, you can passphrase protect this secret key.
+Then when you restore, you'll be asked for the passphrase which is used
+to <a
+href="http://www.turnkeylinux.org/blog/tklbam-backup-passphrase">cryptographically
+unlock</a> the secret key used to encrypt the restored
+backup.</p>
+
+<p>So long as the backed up system is accessible, you can set a new
+passphrase via the TKLBAM Webmin interface without needing to know the
+old passphrase.</p>
+
+<p>If you use passphrase protection, we recommend storing an escrow key
+in a safe place to protect against data loss in case you forget the
+passphrase and can't change it because the backed up system is lost
+(e.g., hard disk crash or terminated EC2 instance).
+</p>
+
+<footer>

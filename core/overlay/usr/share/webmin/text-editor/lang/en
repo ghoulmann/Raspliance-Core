@@ -1,0 +1,10 @@
+index_title=Text Editor
+index_file=Edit file:
+index_ok=Edit
+index_editing=Editing file $1 ..
+index_dos=Save in DOS format
+
+save_err=Failed to save file
+
+log_save=Edited file $1
+

@@ -1,0 +1,10 @@
+start_cmd=Comando per avviare sshd,3,Basta avviare il server
+client_config=Percorso completo file configurazione client ssh,0
+sshd_version=Versione server SSH,3,Rileva automaticamente
+keygen_path=Percorso completo applicazione ssh-keygen,0
+line2=Configurazione di sistema,11
+stop_cmd=Comando per fermare sshd,3,Basta uccidere il processo
+pid_file=Percorso completo file PID sshd,3,Nessuno
+restart_cmd=Comando per applicare configurazione sshd,3,Basta inviare segnale HUP
+sshd_path=Percorso completo applicazione sshd,0
+sshd_config=Percorso completo file configurazione sshd,0

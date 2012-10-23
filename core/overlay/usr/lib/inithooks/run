@@ -1,0 +1,35 @@
+#!/bin/bash
+# Executed by init script
+
+INITHOOKS_DEFAULT=/etc/default/inithooks
+. $INITHOOKS_DEFAULT
+
+if [ "$(echo $REDIRECT_OUTPUT | tr [A-Z] [a-z] )" = "true" ]; then
+    # redirect stdout/stderr (use when preseeding headless deployments)
+    LOGFILE=/var/log/inithooks.log
+    touch $LOGFILE; chmod 640 $LOGFILE
+    echo "Redirecting output to $LOGFILE"
+    exec > >(tee $LOGFILE|logger -t inithooks -s 2>/dev/console) 2>&1
+fi
+
+exec_scripts() {
+    SCRIPT_DIR=$1
+    [ -d $SCRIPT_DIR ] || return 0
+    for SCRIPT in $(find $SCRIPT_DIR -type f | sort); do
+        [ -e $INITHOOKS_CONF ] && . $INITHOOKS_CONF
+        [ -x $SCRIPT ] || continue
+        $SCRIPT
+    done
+    return 0
+}
+
+[ -e $INITHOOKS_CONF ] && . $INITHOOKS_CONF
+export INITHOOKS_CONF=$INITHOOKS_CONF
+
+if [ "$(echo $RUN_FIRSTBOOT | tr [A-Z] [a-z] )" = "true" ]; then
+    exec_scripts $INITHOOKS_PATH/firstboot.d
+    sed -i '/RUN_FIRSTBOOT/ s/=.*/=false/g' $INITHOOKS_DEFAULT
+fi
+exec_scripts $INITHOOKS_PATH/everyboot.d
+
+exit 0

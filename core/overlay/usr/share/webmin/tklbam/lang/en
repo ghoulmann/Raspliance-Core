@@ -1,0 +1,108 @@
+init_title=Initialization (Before we get started...)
+init_apikey=API KEY
+init_button=Continue
+init_apikey_title=Link to your TurnKey Hub account
+init_apikey_desc=Enter the API Key from your <a target='_blank' href='https://hub.turnkeylinux.org/'>TurnKey Hub</a> account's <a target='_blank' href='https://hub.turnkeylinux.org/profile/'>user profile</a> to link TKLBAM to the Hub: 
+init_about_tklbam=<h3>About TKLBAM</h3><p>TKLBAM (TurnKey Linux Backup and Migration) is a smart backup/restore system that just works. No configuration required. It tracks changes to files, databases, and package management state. Restoring is fully automated so you can test backups easily, and migrate working servers anywhere in minutes.</p><p>Learn more: <b><a target='_blank' href="http://www.turnkeylinux.org/tklbam">http://www.turnkeylinux.org/tklbam</a></b></p>
+index_not_installed=tklbam package not installed
+index_backup=Backup
+index_restore=Restore
+index_setpass=Passphrase
+index_download_escrow=Download Escrow Key
+index_advanced_conf=Advanced Configuration
+index_online_docs=Online Documentation
+index_enable_daily=Enable Daily Backups: 
+index_enable_daily_desc=Automatic incremental daily backups. Implemented via cron job (/etc/cron.daily/tklbam-backup).
+index_runbackup=Run Backup
+index_runbackup_desc=Backup this system to encrypted cloud storage on Amazon S3.<br /><br />You can <em>Run a Local Simulation</em> to calculate in advance how much uncompressed data will be stored in a full backup, but in practice, compression and efficient incremental updates reduce the actual storage used.
+index_runbackup_simulate=Run a Local Simulation
+
+index_rollback=Rollback
+index_rollback_title=Rollback Last Restore
+index_rollback_timestamp=System snapshot from $1
+
+index_list=Backup List
+index_list_refresh=Refresh
+index_list_nobackups=No backups have yet been created
+index_list_id=ID
+index_list_passphrase=SKPP (?)
+index_list_created=Created
+index_list_updated=Updated
+index_list_size=Size (MB)
+index_list_label=Label
+index_list_action=Action
+index_list_action_restore=Restore
+index_list_action_options=Advanced Options
+
+rollback_warning=DATA LOSS WARNING: This will rollback your system to the pre-restore snapshot from $1
+rollback_confirm=Confirm Rollback
+rollback_cancel=Cancel
+rollback_title=Runing Rollback...
+rollback_summary=Rolled back to snapshot from $1
+
+log_init=Initialized TKLBAM
+log_escrow=Downloaded escrow key
+log_passphrase=Set passphrase
+log_restore_rollback=Rolled back restore
+
+log_save_overrides=Saved profile overrides
+log_save_conf=Saved configuration options
+log_save_cron_enabled=Enabled daily backup cron job
+log_save_cron_disabled=Disabled daily backup cron job
+
+log_restore=Restored backup id #$1
+log_backup_real=Backup
+log_backup_simulate=Backup simulation
+
+passphrase_title=Passphrase
+passphrase_subtitle=Secret Key Passphrase Protection (?)
+passphrase_new=New passphrase:
+passphrase_new_again=New passphrase (again):
+passphrase_emptydesc=(Leave empty to remove passphrase)
+passphrase_change=Change
+passphrase_cancel=Cancel
+
+passphrase_errorconfirm=Error: Passphrase not confirmed correctly
+passphrase_error=Error
+passphrase_confirm_title=Confirm Passphrase Removal
+passphrase_confirm_desc=Do you really want to remove the passphrase?
+passphrase_confirm_remove=Remove Passphrase
+
+conf_title=Advanced Configuration
+conf_options=Options
+conf_overrides=Overrides
+conf_options_title=Configuration Options
+conf_options_volsize=Size of backup volumes (?)
+conf_options_full_backup=Frequency of full backup (?)
+conf_options_save=Save Options
+
+conf_overrides_title=Backup Overrides ($1)
+conf_overrides_profile=Overrides the defaults in the <b><a href='$1'>backup profile</a></b>
+conf_overrides_save=Save Overrides
+
+restore_title=Advanced Restore Options
+restore_title_options=Configure Restore -- Backup #$1, $2 $3 MB
+restore_timeago=Time ago (?):
+restore_escrow=Escrow key (?):
+restore_limits=Limits (?):
+restore_skip=Skip (?):
+restore_skip_packages=New packages
+restore_skip_files=Filesystem changes
+restore_skip_database=Database
+restore_run=Restore
+
+restore_passphrase_title=Passphrase Required to Restore Backup #$1
+restore_passphrase_title_escrow=Passphrase Required for '$1'
+restore_passphrase=Passphrase:
+restore_passphrase_continue=Continue
+restore_passphrase_empty=Error: passphrase can't be empty
+restore_passphrase_required=Passphrase Required
+
+restore_incompatible=Are you sure you want to restore an incompatible backup?
+restore_incompatible_confirm=Confirm
+restore_incompatible_cancel=Cancel
+
+restore_restoring_title=Restoring Backup #$1 ...
+
+profile_title=View Backup Profile
+profile_subtitle=Filesystem backup profile ($1)

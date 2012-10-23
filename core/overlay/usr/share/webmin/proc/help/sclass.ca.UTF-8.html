@@ -1,0 +1,16 @@
+<header>Classe de planificaciÃ³ d'E/S</header>
+
+Les opcions disponibles sÃ³n:<p>
+<dl>
+<dt><b>Inactiu</b>
+<dd>Un programa en execuciÃ³ amb una prioritat d'E/S d'"Inactiu" nomÃ©s obtindrÃ  temps de disc quan no hi hagi cap altre programa que hagi demanat E/S de disc per a un perÃ­ode de grÃ cia definit. L'impacte dels processos E/S inactius en una activitat normal del sistema hauria de ser zero. Aquesta classe de planificaciÃ³ no pren cap argument de prioritat.<p>
+
+<li><b>Millor esforÃ§</b>
+<dd>Aquesta Ã©s la classe de planificaciÃ³ per defecte de qualsevol procÃ©s que no ha demanat una prioritat especÃ­fica. Els programes executant-se a la mateixa prioritat del millor esforÃ§ se serveixen per torn.
+
+<li><b>Temps real</b>
+<dd>A la classe de planificaciÃ³ en temps real, se li dÃ³na el primer accÃ©s al disc, independentment del que estigui passant al sistema. AixÃ­, ical utilitzar la classe TR amb alguna precauciÃ³, ja que pot deixar altres processos en espera indefinida.
+
+</dl>
+<footer>
+

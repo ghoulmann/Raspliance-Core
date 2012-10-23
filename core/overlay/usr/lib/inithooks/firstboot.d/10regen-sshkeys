@@ -1,0 +1,10 @@
+#!/bin/bash -e
+# remove existing ssh keys and generate new ones
+# note: ssh daemon needs to be restarted for changes to take effect
+
+echo "* Regenerating SSH cryptographic keys"
+
+rm -f /etc/ssh/ssh_host_[dr]sa_key*
+ssh-keygen -q -f /etc/ssh/ssh_host_rsa_key -N '' -t rsa
+ssh-keygen -q -f /etc/ssh/ssh_host_dsa_key -N '' -t dsa
+

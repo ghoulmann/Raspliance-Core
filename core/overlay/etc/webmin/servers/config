@@ -1,0 +1,9 @@
+show_status=1
+groups_dir=/etc/cluster/groups
+resolve=1
+deflink=0
+display_mode=0
+show_ip=0
+deffast=2
+scan_time=5
+sort_mode=0

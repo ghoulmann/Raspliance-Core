@@ -1,0 +1,8 @@
+width=Breite des Dateieditor-Fensters,3,Standard (80 Zeichen)
+params_file=Behandlung von Standardwerten, beginnend mit / als Datei lesen?,1,1-Ja,0-Nein
+height=H&#246;he des Dateieditor-Fensters,3,Standard (20 Zeichen)
+params_cmd=Behandlung von Standardwerten, die mit | enden als Befehl ausf&#252;hren,1,1-Ja,0-Nein
+display_mode=Hauptseite zeigt,1,0-Alle Befehle und Parameter,1-Verkn&#252;pfungen zu Befehlen
+sort=Sortiere Befehle nach,1,desc-Command-Name,html-Beschreibung,-Befehlsabarbeitung
+wrap=Zeilenumbruch im Dateieditor,1,-Standard (Weich),hard-Hart,off-Ausschalten
+columns=Spalten, um Befehle anzuzeigen in,1,2-2,1-1

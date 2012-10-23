@@ -1,0 +1,83 @@
+
+h3 {
+	font-size: 13pt;
+}
+
+#header {
+	display: none;
+}
+body { 
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	margin-top: 16px;
+	background: white;	
+}
+div#contentcontainer {
+	border: none;
+}
+div#uploadtitle {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50px;
+	z-index: 5;
+	color: #666;
+	padding-top: 9px;
+	text-align: center;	
+	background: url(images/printbackground.jpg) repeat-x top left;
+}
+div#uploadtitle span {
+	width: 253px;
+	background: url(images/helptitlebackground.jpg) no-repeat top center;
+	font-size: 14px;
+	margin: 0px;
+	padding-left: 95px;
+	padding-right: 95px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+div#uploadoption {
+	height: 50px;
+	margin: 0px;
+	padding: 4px;
+	padding-bottom: 0px;	
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 98%;
+	z-index: 10;
+}
+div#uploadoption ul {
+	margin: 0px;
+	padding: 0px;
+}
+div#uploadoption ul li.uploadclose {
+	width: 31px;
+	height: 24px;
+	float: right;
+}
+div#uploadoption ul li.uploadclose a {
+	display: block;
+	background: url(images/closebutton.jpg) no-repeat top left;
+	padding-top: 24px;
+	height: 0px;
+	width: 28px;
+	overflow: hidden;	
+}
+
+div#maincontent center h3 {
+	text-align: left;
+	color: black;
+	font-size: 16pt;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Trebuchet MS', 'Bitstream Vera Sans', Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+tr.tabheader {
+	display: none;
+}
+

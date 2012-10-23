@@ -1,0 +1,34 @@
+$_icons->{_DEFAULT_} = 'default16x16.png';
+
+
+$_icons->{'at'} = 'time.png';
+$_icons->{'changepass'} = 'passwd.png';
+$_icons->{'chfn'} = 'userconf.png';
+$_icons->{'commands'} = 'exec.png';
+$_icons->{'cron'} = 'cron.png';
+$_icons->{'cshrc'} = 'control.png';
+$_icons->{'fetchmail'} = 'fetchmail.png';
+$_icons->{'file'} = 'fileman.png';
+$_icons->{'forward'} = 'mailout.png';
+$_icons->{'gnupg'} = 'ssl2.png';
+$_icons->{'htaccess'} = 'apache.png';
+$_icons->{'htaccess-htpasswd'} = 'tresor.png';
+$_icons->{'language'} = 'flags.png';
+$_icons->{'mailbox'} = 'outlook.png';
+$_icons->{'man'} = 'man.png';
+$_icons->{'mysql'} = 'mysql2.png';
+$_icons->{'plan'} = 'custom.png';
+$_icons->{'postgresql'} = 'postgresql.png';
+$_icons->{'proc'} = 'services.png';
+$_icons->{'procmail'} = 'procmail.png';
+$_icons->{'quota'} = 'quota.png';
+$_icons->{'schedule'} = 'email.png';
+$_icons->{'shell'} = 'shell.png';
+$_icons->{'spam'} = 'mail_filter.png';
+$_icons->{'ssh'} = 'ssh2.png';
+$_icons->{'telnet'} = 'cmpmgr.png';
+$_icons->{'theme'} = 'photo.png';
+$_icons->{'theme-xpstyle-config'} = 'xpstyle.png';
+$_icons->{'tunnel'} = 'snyc.png';
+$_icons->{'updown'} = 'ftp.png';
+$_icons->{'usermount'} = 'diskmgr.png';

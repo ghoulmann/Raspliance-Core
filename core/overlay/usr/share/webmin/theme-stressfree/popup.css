@@ -1,0 +1,94 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  background: url(images/menuhover.jpg) top left repeat-x #fff;
+}
+
+body,td,th {
+  font-family: 'Trebuchet MS', 'Bitstream Vera Sans', Verdana, Geneva,
+    Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+}
+
+tt {
+  color: #666;
+  font-family: 'Trebuchet MS', 'Bitstream Vera Sans', Verdana, Geneva,
+    Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none 0px;
+  margin: 0px 0px 10px 0px;
+}
+
+td {
+  padding: 0px;
+  background: #fff;
+}
+
+h3.ui_subheading,b {
+  color: #fff;
+  margin: 0px;
+  display: block;
+  font-size: 12pt;
+  font-weight: bold;
+  padding: 9px 0px 9px 7px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12pt;
+}
+
+table.ui_columns td {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #ccc;
+  padding: 4px 0px 4px 10px;
+}
+
+table.ui_table td {
+  padding: 6px 0px 6px 0px;
+}
+
+/* Reset the b style */
+td b {
+  display: inline;
+  padding: 0px;
+  margin: 0px;
+  font-size: 10pt;
+  font-family: 'Trebuchet MS', 'Bitstream Vera Sans', Verdana, Geneva,
+    Arial, Helvetica, sans-serif;
+}
+
+input {
+  font-family: 'Trebuchet MS', 'Bitstream Vera Sans', Verdana, Geneva,
+    Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #070B2C;
+  border: 1px solid #ccc;
+}
+
+input.ui_textbox {
+  width: 270px !important;
+  border: 1px solid #ccc;
+}
+
+input.ui_submit {
+  padding: 4px;
+  margin: 0px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-weight: bold;
+  background: url('images/button.gif') repeat-x top left white;
+}
+
+hr {
+  height: 1px;
+  color: #ccc;
+}

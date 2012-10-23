@@ -1,0 +1,7 @@
+smbclient_path=smbclient
+fstab_file=/etc/fstab
+show_used=1
+autofs_file=/etc/auto.master
+nmblookup_path=nmblookup
+long_fstypes=1
+auto_file=/etc/am-utils/amd.conf

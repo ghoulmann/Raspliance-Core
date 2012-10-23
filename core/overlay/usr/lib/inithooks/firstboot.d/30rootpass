@@ -1,0 +1,8 @@
+#!/bin/bash -e
+# set root password
+
+. /etc/default/inithooks
+
+[ -e $INITHOOKS_CONF ] && . $INITHOOKS_CONF
+$INITHOOKS_PATH/bin/setpass.py root --pass="$ROOT_PASS"
+

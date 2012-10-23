@@ -1,0 +1,41 @@
+
+#header {
+	display: none;
+}
+body { 
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	background: white;	
+}
+div#contentcontainer {
+	border: none;
+}
+div#maincontent {
+	border: none;
+	padding: 0px;
+}
+
+tr.tabheader {
+	display: none;
+}
+
+table { 
+	padding: 0px;
+	margin: 0px;
+	border-collapse: collapse;
+}
+td {
+	border-top: 1px solid #CCC;
+	padding-left: 7px;
+}
+tt {	
+	font-family: 'Trebuchet MS', 'Bitstream Vera Sans', Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #666;
+}
+b {
+	font-size: 12pt;
+	display: block;
+	margin: 5px;
+}

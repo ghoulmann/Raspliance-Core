@@ -1,0 +1,320 @@
+#! /bin/bash -ex
+
+#Set Hostname to Core
+
+#1. Must be root
+#2. from standard Raspian install:
+	#3. sudo passwd root
+	#4. set passwd; repeat for consistency
+#3. logout; login as root.
+
+#Logout of LXDE, it's about to be purged.
+
+#Set hostname to Core (mimics TurnKey Linux)
+
+HOSTNAME=core
+echo "$HOSTNAME" > /etc/hostname
+sed -i "s|127.0.1.1 \(.*\)|127.0.1.1 $HOSTNAME|" /etc/hosts
+
+#purge function: Purges all packages that don't approximately match Turnkey Linux Manifest
+
+purge ()
+{
+	apt-get purge
+	DEBIAN_FRONTEND=noninteractive apt-get -y \
+        -o DPkg::Options::=--force-confdef \
+        -o DPkg::Options::=--force-confold \
+	purge $@
+}
+
+purge sudo \
+	scratch \
+	lxde \
+	xserver-xorg \
+	lightdm \
+	lightdm-gtk-greeter \
+	gnome-icon-theme \
+	gnome-themes-standard
+
+#Remove unneeded packages
+apt-get autoremove -y
+
+
+#install function
+install ()
+{
+	apt-get update
+	DEBIAN_FRONTEND=noninteractive apt-get -y \
+        -o DPkg::Options::=--force-confdef \
+        -o DPkg::Options::=--force-confold \
+        install $@
+}
+
+#Install from Repos - Approximate packages in Turnkey Core manifest.
+install acpid \
+	adduser \
+	apt \
+	base-files \
+	base-passwd \
+	bash \
+	bash-completion \
+	bind9-host \
+	bsdmainutils \
+	bsdutils \
+	ca-certificates \
+	console-terminus \
+	coreutils \
+	cpio \
+	cron \
+	cron-apt \
+	dash \
+	debconf \
+	debconf-i18n \
+	debian-archive-keyring \
+	debianutils \
+	dialog \
+	diffutils \
+	dmsetup \
+	dpkg \
+	e2fslibs \
+	e2fsprogs \
+	eject \
+	etckeeper \
+	ethtool \
+	file \
+	findutils \
+	gcc-4.4-base \
+	gettext-base \
+	git \
+	git-core \
+	gnupg \
+	gpgv \
+	grep \
+	groff-base \
+	gzip \
+	hdparm \
+	hostname \
+	ifupdown \
+	insserv \
+	iproute \
+	iptables \
+	iputils-ping \
+	kbd \
+	keyboard-configuration \
+	klibc-utils \
+	less \
+	libacl1 \
+	libattr1 \
+	libauthen-pam-perl \
+	libblkid1 \
+	libbsd0 \
+	libbz2-1.0 \
+	libc-bin \
+	libc6 \
+	libcap2 \
+	libcomerr2 \
+	libcurl3-gnutls \
+	libdebconfclient0 \
+	libdebian-installer4 \
+	libdevmapper1.02.1 \
+	libedit2 \
+	liberror-perl \
+	libexpat1 \
+	libfreetype6 \
+	libgcc1 \
+	libgcrypt11 \
+	libgdbm3 \
+	libgeoip1 \
+	libgnutls26 \
+	libgpg-error0 \
+	libgssapi-krb5-2 \
+	libidn11 \
+	libio-pty-perl \
+	libk5crypto3 \
+	libkeyutils1 \
+	libklibc \
+	libkrb5-3 \
+	libkrb5support0 \
+	libldap-2.4-2 \
+	liblocale-gettext-perl \
+	libmagic1 \
+	libncurses5 \
+	libncursesw5 \
+	libnet-ssleay-perl \
+	libnewt0.52 \
+	libnfnetlink0 \
+	libopts25 \
+	libpam-modules \
+	libpam-runtime \
+	libpam0g \
+	libparted \
+	libpopt0 \
+	libreadline5 \
+	libreadline6 \
+	librsync1 \
+	libsasl2-2 \
+	libselinux1 \
+	libsepol1 \
+	libslang2 \
+	libsqlite3-0 \
+	libss2 \
+	libstdc++6 \
+	libtasn1-3 \
+	libtext-charwidth-perl \
+	libtext-iconv-perl \
+	libtext-wrapi18n-perl \
+	libudev0 \
+	libusb-0.1-4 \
+	libuuid-perl \
+	libuuid1 \
+	libwrap0 \
+	libxml2 \
+	localepurge \
+	locales \
+	login \
+	logrotate \
+	lsb-base \
+	lsb-release \
+	lvm2 \
+	man-db \
+	mawk \
+	mime-support \
+	mktemp \
+	module-init-tools \
+	mount \
+	nano \
+	ncurses-base \
+	ncurses-bin \
+	net-tools \
+	netbase \
+	ntp \
+	ntpdate \
+	openssh-blacklist \
+	openssh-client \
+	openssh-server \
+	openssl \
+	os-prober \
+	passwd \
+	perl \
+	perl-base \
+	perl-modules \
+	procps \
+	psmisc \
+	python \
+	python-central \
+	python-crypto \
+	python-minimal \
+	python-pycurl \
+	python-simplejson \
+	python-support \
+	python2.6 \
+	python2.6-minimal \
+	readline-common \
+	resolvconf \
+	rsync \
+	rsyslog \
+	screen \
+	sed \
+	sensible-utils \
+	shellinabox \
+	ssh \
+	syslinux-common \
+	sysv-rc \
+	sysvinit \
+	sysvinit-utils \
+	tar \
+	traceroute \
+	tzdata \
+	ucf \
+	udev \
+	udhcpc \
+	unzip \
+	util-linux \
+	uuid-runtime \
+	vim-common \
+	vim-tiny \
+	wget \
+	whiptail \
+	xkb-data \
+	xz-utils \
+	zlib1g \
+	libbind9-80 \
+	libdns81 \
+	libgmp3-dev \
+	libisc83 \
+	libisccc80 \
+	libisccfg82 \
+	liblwres80 \
+	liblzma5 \
+	libssl1.0.0
+
+#Install Python-Dialog
+mkdir /tmp/pythondialog
+cd /tmp/pythondialog/
+wget http://code.turnkeylinux.org/pythondialog/setup.py 
+wget http://code.turnkeylinux.org/pythondialog/dialog.py
+wget http://code.turnkeylinux.org/pythondialog/setup.cfg
+#Setup PythonDialog
+python setup.py install
+
+#Install Pycurl-Wrapper
+mkdir -p /tmp/pycurl-wrapper/pylib
+mkdir -p /tmp/pycurl-wrapper/debian
+cd /tmp/pycurl-wrapper/debian
+wget http://code.turnkeylinux.org/pycurl-wrapper/debian/control
+cd /tmp/pycurl-wrapper
+wget http://code.turnkeylinux.org/pycurl-wrapper/setup.py
+cd pylib/
+wget http://code.turnkeylinux.org/pycurl-wrapper/pylib/pycurl_wrapper.py
+cd /tmp/pycurl-wrapper/
+python setup.py install
+
+#Install Turnkey Pylib
+mkdir -p /tmp/turnkey-pylib/
+cd /tmp/turnkey-pylib/
+wget http://code.turnkeylinux.org/turnkey-pylib/setup.py
+mkdir -p /tmp/turnkey-pylib/pylib/
+cd pylib
+wget http://code.turnkeylinux.org/turnkey-pylib/pylib/command.py
+wget http://code.turnkeylinux.org/turnkey-pylib/pylib/conffile.py
+wget http://code.turnkeylinux.org/turnkey-pylib/pylib/debian_pylib.py
+wget http://code.turnkeylinux.org/turnkey-pylib/pylib/executil.py
+wget http://code.turnkeylinux.org/turnkey-pylib/pylib/fifobuffer.py
+wget http://code.turnkeylinux.org/turnkey-pylib/pylib/fileevent.py
+wget http://code.turnkeylinux.org/turnkey-pylib/pylib/lazyclass.py
+wget http://code.turnkeylinux.org/turnkey-pylib/pylib/multiprocessing_utils.py
+wget http://code.turnkeylinux.org/turnkey-pylib/pylib/netinfo.py
+wget http://code.turnkeylinux.org/turnkey-pylib/pylib/paths.py
+wget http://code.turnkeylinux.org/turnkey-pylib/pylib/pidlock.py
+wget http://code.turnkeylinux.org/turnkey-pylib/pylib/popen4.py
+wget http://code.turnkeylinux.org/turnkey-pylib/pylib/sigignore.py
+wget http://code.turnkeylinux.org/turnkey-pylib/pylib/stdtrap.py
+wget http://code.turnkeylinux.org/turnkey-pylib/pylib/sysversion.py
+wget http://code.turnkeylinux.org/turnkey-pylib/pylib/temp.py
+wget http://code.turnkeylinux.org/turnkey-pylib/pylib/threadloop.py
+cd /tmp/turnkey-pylib
+mkdir debian
+cd debian/
+wget http://code.turnkeylinux.org/turnkey-pylib/debian/control
+cd /tmp/turnkey-pylib
+python setup.py install
+cd ~/
+
+#Inithooks conf
+cd /etc
+wget http://code.turnkeylinux.org/inithooks/debian/init
+mv /etc/init /etc/confconsole.conf
+
+#Update rc.d for services
+update-rc.d webmin defaults
+update-rc.d confconsole defaults
+update-rc.d inithooks defaults
+update-rc.d ssh defaults
+update-rc.d shellinabox defaults
+#pi
+deluser --remove-home pi
+#addgroup certssl
+#delgroup lightdm
+
+#shellinabox configurator
+sed -i "s|4200|12320|" /etc/default/shellinabox

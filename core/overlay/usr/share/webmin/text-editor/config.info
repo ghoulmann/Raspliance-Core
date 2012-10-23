@@ -1,0 +1,3 @@
+cols=Columns in text editor,0,5
+rows=Rows in text editor,0,5
+wrap=Wrapping mode,1,-Default,wrap=on-Enabled,wrap=off-Disabled
