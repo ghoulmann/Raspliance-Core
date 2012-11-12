@@ -16,6 +16,7 @@
 <li>You have logged off any users that were logged in.
 <li>You have ssh enabled (raspi-config is one method).
 <li>Raspi is not configured to load directly into windowed session (use raspi config)
+<li>Maximize system memory, minimize display RAM with sudo raspi-config
 <li>Patch is downloaded to /tmp; most likely using git clone. If zip package is downloaded, it should be unzipped -- preferably to /tmp.
 </ul>
 <h2>To Use</h2>
