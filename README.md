@@ -1,5 +1,6 @@
 <html><head></head><body>
 <h1>"Raspliance Core": Patching Raspbian to a Headless Server Appliance</h1>
+<p>Most of the work is done with the script here: https://github.com/ghoulmann/Raspliance-Core/blob/master/core/conf</p>
 <p>Raspliance Core is a remix of Raspian/Raspbian that intends to make the most of Raspberry Pi's potentials as a server platform.
 
 <p>It's as much a remix of Raspian/Raspbian as it is of TurnKey Linux Core 12.0, which it's modeled after.
