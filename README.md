@@ -1,11 +1,16 @@
 <html><head></head><body>
-<h1>"Raspliance Core": Patching Raspian to a headless server appliance</h1>
+<h1>"Raspliance Core": Patching Raspbian to a Headless Server Appliance</h1>
 <p>Raspliance Core is a remix of Raspian/Raspbian that intends to make the most of Raspberry Pi's potentials as a server platform.
 
 <p>It's as much a remix of Raspian/Raspbian as it is of TurnKey Linux Core 12.0, which it's modeled after.
 
 <p>The devs at Turnkey Linux have made an art of the dedicated appliance platform; I've tried to follow their lead while relying heavily on their code and wise decisions.
-
+<h2>Features</h2>
+<ul><li>Webmin and modules: listens on port 12321
+<li>Shellinabox (ajax web shell): listens on port 12320
+<li>Confconsole (TKL services list)
+<li>inithooks: configure root password on first boot</li>
+</ol>
 <h2>Assumptions</h2>
 <ul><li>You have created a password for root: if you're logged in to another account, do sudo passwd root.
 <li>You have logged off any users that were logged in.
@@ -19,6 +24,7 @@
 <li>Use this command to apply the patch (assuming your in the directory with the git clone):</li>
 <pre>tklpatch-apply / ./core/</pre>
 <li>This applies the root directory to your running instance of raspian. Don't quit reading here.
+<li>After the patch completes, you'll need to reboot. Prepare to configure a root password.
 </ul>
 <h2>Contents</h2>
 <h3>compile_tklpatch.sh</h3>
