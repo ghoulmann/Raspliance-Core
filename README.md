@@ -10,7 +10,7 @@
 <li>Shellinabox (ajax web shell): listens on port 12320
 <li>Confconsole (TKL services list)
 <li>inithooks: configure root password on first boot</li>
-</ol>
+</ul>
 <h2>Assumptions</h2>
 <ul><li>You have created a password for root: if you're logged in to another account, do sudo passwd root.
 <li>You have logged off any users that were logged in.
