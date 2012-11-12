@@ -40,7 +40,7 @@ compiles tklpatch, the SDK developed by TurnKey Linux and which has really creat
 3. Inject the modified services.txt file for confconsole into /etc/confconsole.
 2. Purges Raspian/Raspbian packages that could obviously be purged.
 3. Uses apt-get to install packages. The list of packages is intended to match those in the Turnkey Linux Core 12.0 manifest (with the exception of webmin and modules).
-
+4. Purges unnecessary, inessential packages.
 Reviewing assumptions
 3. You have logged in as root.
 4. You have installed git by doing apt-get install git.
