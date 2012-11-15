@@ -27,14 +27,14 @@ purge ()
 	purge $@
 }
 
-purge sudo \
-	scratch \
+purge scratch \
 	lxde \
 	xserver-xorg \
 	lightdm \
 	lightdm-gtk-greeter \
 	gnome-icon-theme \
-	gnome-themes-standard
+	gnome-themes-standard \
+	consolekit
 
 #Remove unneeded packages
 apt-get autoremove -y
