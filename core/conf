@@ -34,7 +34,8 @@ purge scratch \
 	lightdm-gtk-greeter \
 	gnome-icon-theme \
 	gnome-themes-standard \
-	consolekit
+	consolekit \
+	gtk2-engines
 
 #Remove unneeded packages
 apt-get autoremove -y
