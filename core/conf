@@ -1,17 +1,5 @@
 #! /bin/bash -ex
 
-#Set Hostname to Core
-
-#1. Must be root
-#2. from standard Raspian install:
-	#3. sudo passwd root
-	#4. set passwd; repeat for consistency
-#3. logout; login as root.
-
-#Logout of LXDE, it's about to be purged.
-
-#Set hostname to Core (mimics TurnKey Linux)
-
 HOSTNAME=core
 echo "$HOSTNAME" > /etc/hostname
 sed -i "s|127.0.1.1 \(.*\)|127.0.1.1 $HOSTNAME|" /etc/hosts
@@ -53,8 +41,7 @@ install ()
 }
 
 #Install from Repos - Approximate packages in Turnkey Core manifest.
-install acpid \
-	adduser \
+install adduser \
 	apt \
 	base-files \
 	base-passwd \
